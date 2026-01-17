@@ -4,16 +4,6 @@ Collection d'exemples WebXR et A-Frame pour apprendre à créer des expériences
 
 ## 🚀 Démarrage rapide
 
-### Lancer le serveur local
-
-```bash
-python3 server.py
-```
-
-Puis ouvrez votre navigateur sur `https://localhost:8000`
-
-> **Note :** Un certificat SSL auto-signé est nécessaire pour WebXR. Acceptez l'exception de sécurité dans votre navigateur.
-
 ### Tester sur Quest 3
 
 1. Assurez-vous que votre Quest 3 et votre ordinateur sont sur le même réseau
@@ -72,8 +62,6 @@ A-Frame est un framework déclaratif qui simplifie la création d'expériences W
 
 ### Testé sur :
 - ✅ Meta Quest 3 (navigateur natif)
-- ✅ Meta Quest 2
-- ⚠️ Smartphones AR (support variable selon le modèle)
 
 ### Fonctionnalités supportées :
 - **VR immersive** : Tous les exemples A-Frame
