@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="hit/script.js"></script>
+    <title>hit test</title>
+</head>
+<body>
+    <h1>Index Test Page</h1>
+    <a-scene cursor="rayOrigin: mouse">
+        <a-assets>
+            <img id="treeTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+            <a-asset-item id="treeModel" src="https://cdn.aframe.io/examples/ar/models/reticle/reticle.gltf"></a-asset-item>
+        </a-assets>
+        <a-box position="-1.5 1 -1.5" rotation="0 0 0" color="orange"></a-box>
+        <a-sphere position="0 1.25 -3" radius="1.25" color="purple"></a-sphere>
+        <a-cylinder position="1 0.75 -2" radius="0.5" height="1.5" color="green" color-toggle></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" hit-pointer></a-plane>
+        <a-entity gltf-model="#treeModel" position="0 1.25 0"></a-entity>
+        <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg" rotation="0 -130 0"></a-sky>
+
+        <!-- pour créer camera et le curseur
+        <a-entity id="rig"> -->
+            <a-entity id="camera" camera position="0 2 0" look-controls> 
+                <!-- look-controls pour tourner la tête -->
+                <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000"></a-cursor>
+                <!-- créer un curseur au centre d'écran, raycaster pour faire un rayon, fuse pour activer le fuse, fusetimeout pour le temps avant activation -->
+            </a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+</html>
